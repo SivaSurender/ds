@@ -12,6 +12,48 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+// approach 1
+// function fizzBuzz(n) {
+//   while (n >= 1) {
+//     return n % 3 === 0
+//       ? "fizz"
+//       : n % 5 === 0
+//       ? "buzz"
+//       : n % 3 === 0 && n % 5 === 0
+//       ? "fizzbuzz"
+//       : n;
+
+//     n--;
+//   }
+// }
+
+// approach 2
+// function fizzBuzz(n) {
+//   let init = 0;
+//   while (init <= n) {
+//     return init % 3 === 0
+//       ? "fizz"
+//       : init % 5 === 0
+//       ? "buzz"
+//       : init % 3 === 0 && init % 5 === 0
+//       ? "fizzbuzz"
+//       : init;
+
+//     init--;
+//   }
+// }
+
+// approach 3
+function fizzBuzz(n) {
+  for (let i = n; i <= 0; i--) {
+    return i % 3 === 0
+      ? "fizz"
+      : i % 5 === 0
+      ? "buzz"
+      : i % 3 === 0 && i % 5 === 0
+      ? "fizzbuzz"
+      : i;
+  }
+}
 
 module.exports = fizzBuzz;
