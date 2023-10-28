@@ -13,19 +13,31 @@
 //   buzz
 
 // approach 1
-// function fizzBuzz(n) {
-//   while (n >= 1) {
-//     return n % 3 === 0
-//       ? "fizz"
-//       : n % 5 === 0
-//       ? "buzz"
-//       : n % 3 === 0 && n % 5 === 0
-//       ? "fizzbuzz"
-//       : n;
+function fizzBuzz(n) {
+  const results = [];
 
-//     n--;
-//   }
-// }
+  while (n >= 1) {
+    let value;
+
+    if (n % 3 === 0 && n % 5 === 0) {
+      value = "fizzbuzz";
+    } else if (n % 3 === 0) {
+      value = "fizz";
+    } else if (n % 5 === 0) {
+      value = "buzz";
+    } else {
+      value = n;
+    }
+
+    results.unshift(value);
+
+    n--;
+  }
+
+  results.forEach((result) => console.log(result)); // Print results
+
+  return results;
+}
 
 // approach 2
 // function fizzBuzz(n) {
@@ -44,16 +56,16 @@
 // }
 
 // approach 3
-function fizzBuzz(n) {
-  for (let i = n; i <= 0; i--) {
-    return i % 3 === 0
-      ? "fizz"
-      : i % 5 === 0
-      ? "buzz"
-      : i % 3 === 0 && i % 5 === 0
-      ? "fizzbuzz"
-      : i;
-  }
-}
+// function fizzBuzz(n) {
+//   for (let i = n; i <= 0; i--) {
+//     return i % 3 === 0
+//       ? "fizz"
+//       : i % 5 === 0
+//       ? "buzz"
+//       : i % 3 === 0 && i % 5 === 0
+//       ? "fizzbuzz"
+//       : i;
+//   }
+// }
 
 module.exports = fizzBuzz;
