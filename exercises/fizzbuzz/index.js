@@ -34,7 +34,7 @@ function fizzBuzz(n) {
     n--;
   }
 
-  results.forEach((result) => console.log(result)); // Print results
+  results.forEach((result) => console.log(result));
 
   return results;
 }
